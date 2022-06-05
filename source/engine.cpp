@@ -1,7 +1,7 @@
 #include <iostream>
 #include <thread>
 
-#include "SDL/SDL.h"
+#include <SDL.h>
 
 #include "global.h"
 #include "engine.h"

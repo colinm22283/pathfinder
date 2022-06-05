@@ -1,6 +1,6 @@
 #pragma once
 
-#include "SDL/SDL.h"
+#include <SDL.h>
 
 #define PI 3.14159265
 

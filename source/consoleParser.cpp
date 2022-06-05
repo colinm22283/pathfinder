@@ -1,7 +1,7 @@
 #include <string>
 #include <map>
 #include <iostream>
-#include "SDL/SDL.h"
+#include <SDL.h>
 
 #include "consoleParser.h"
 #include "script.h"
