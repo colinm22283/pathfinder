@@ -1,0 +1,3 @@
+/home/chrx/pathfinder/cmake-build-debug/CMakeFiles/Pathfinder.dir
+/home/chrx/pathfinder/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/chrx/pathfinder/cmake-build-debug/CMakeFiles/rebuild_cache.dir

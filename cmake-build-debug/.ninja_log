@@ -1,0 +1,19 @@
+# ninja log v5
+9953	11412	1654357413346162814	CMakeFiles/AtomicModel.dir/source/consoleParser.cpp.o	a7f1146454f881d7
+2913	4162	1654357406098293624	CMakeFiles/AtomicModel.dir/source/img/bmp.cpp.o	12fea7bd29a2144c
+2	1765	1654437549352525898	CMakeFiles/AtomicModel.dir/scripts/source/dijkstra.cpp.o	c403cabe7b479a10
+0	21	0	/home/chrx/pathfinder/cmake-build-debug/CMakeFiles/cmake.verify_globs	31ec3c242faa5e8e
+39	136	1654437836270556076	build.ninja	cd3d02e321e3e08f
+8684	9953	1654357411886188878	CMakeFiles/AtomicModel.dir/source/console.cpp.o	7f0eb6b5760b0660
+12159	13913	1654357415846118500	CMakeFiles/AtomicModel.dir/source/engine.cpp.o	5a75246bf5290537
+4162	5616	1654357407550267141	CMakeFiles/AtomicModel.dir/source/img/img.cpp.o	183b3ff7ff463156
+0	1568	1654357403502341346	CMakeFiles/AtomicModel.dir/source/event.cpp.o	69b9c7494d26bb0e
+5646	7021	1654357408954241656	CMakeFiles/AtomicModel.dir/source/main.cpp.o	9d104c6d15945ffb
+7021	7675	1654357409610229804	CMakeFiles/AtomicModel.dir/source/misc.cpp.o	d4d59d7ce62e233e
+2	1468	1654437174679699442	CMakeFiles/AtomicModel.dir/scripts/source/main.cpp.o	9657008bddd12799
+2672	2913	1654357404846316581	CMakeFiles/AtomicModel.dir/source/global.cpp.o	6fd0c02c3475bbcc
+7675	8683	1654357410618211638	CMakeFiles/AtomicModel.dir/source/render.cpp.o	3083b026c4fb5c99
+3	778	1654361118408714375	CMakeFiles/AtomicModel.dir/scripts/source/grid.cpp.o	8a0a69384a0be8d
+1570	2672	1654357404602321070	CMakeFiles/AtomicModel.dir/source/font.cpp.o	63d43264624d441b
+5616	5646	1654357407582266558	CMakeFiles/AtomicModel.dir/source/input.cpp.o	98eccb24c6cf9dff
+1765	2233	1654437549820570092	AtomicModel	740d9a88dffd8669
