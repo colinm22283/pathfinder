@@ -14,8 +14,6 @@
 void engineUpdateStart();
 void quitThreadFunction();
 
-bool awaitingEngineQuit = false;
-
 long prevTime = 0;
 
 SDL_Window* window = nullptr;

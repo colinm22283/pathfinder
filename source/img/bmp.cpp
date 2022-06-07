@@ -3,10 +3,8 @@
 #include <iostream>
 
 #include <color.h>
-#include <render.h>
 
 #include <img/bmp.h>
-#include <img/img.h>
 
 bmp::bmp()
 {
