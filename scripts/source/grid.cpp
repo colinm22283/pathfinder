@@ -14,6 +14,9 @@ unsigned int startPosY = START_POS_Y;
 unsigned int goalPosX = GOAL_POS_X;
 unsigned int goalPosY = GOAL_POS_Y;
 
+bool pathFound = false;
+unsigned int pathLength = 0;
+
 tile grid[GRID_WIDTH][GRID_HEIGHT];
 
 void gridInit()

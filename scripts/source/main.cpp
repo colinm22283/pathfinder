@@ -15,6 +15,8 @@ enum gridTool { DRAW, ERASE, START, GOAL };
 
 gridTool currentTool = gridTool::DRAW;
 
+bool pathfinderUpdate = false;
+
 void Script::exit()
 {
     Engine::quit();
@@ -28,7 +30,6 @@ void Script::start()
     gridInit();
 }
 
-bool pathfinderUpdate = false;
 void Script::update()
 {
     Render::clearScreen();
@@ -68,6 +69,11 @@ void Script::update()
     }
 
     if (pathfinderUpdate) PATHFINDER_UPDATE();
+
+    if (pathFound)
+    {
+        Render::drawText(650, 80, Font::consolas, "Steps: " + std::to_string(pathLength));
+    }
 }
 
 void Script::keyDown(SDL_Keysym keysym)

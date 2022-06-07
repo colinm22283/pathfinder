@@ -31,7 +31,6 @@ long Engine::deltaTime = 0;
 bool Engine::init()
 {
     Engine::running = true;
-    awaitingEngineQuit = true;
 
     if (SDL_Init(SDL_INIT_VIDEO) < 0)
     {
@@ -85,8 +84,6 @@ void quitThreadFunction()
     window = nullptr;
 
     SDL_Quit();
-
-    awaitingEngineQuit = false;
 }
 void Engine::start()
 {

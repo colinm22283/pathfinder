@@ -36,9 +36,13 @@ bool dijkstraUpdate()
             current = current->from;
 
             if (current == nullptr) break;
+
+            pathLength++;
         }
 
         for (unsigned int i = 0; i < (unsigned int)all.size(); i++) delete all[i];
+
+        pathFound = true;
     }
 
     all.push_back(next[0]);

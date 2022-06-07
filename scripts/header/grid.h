@@ -19,6 +19,9 @@ extern unsigned int startPosY;
 extern unsigned int goalPosX;
 extern unsigned int goalPosY;
 
+extern bool pathFound;
+extern unsigned int pathLength;
+
 extern tile grid[GRID_WIDTH][GRID_HEIGHT];
 
 void gridInit();
