@@ -13,7 +13,7 @@ SDL_Event Event::event;
 
 void Event::init()
 {
-    while (!Engine::quit)
+    while (Engine::running)
     {
         Event::update();
     }

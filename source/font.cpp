@@ -1,6 +1,7 @@
+#include <iostream>
+
 #include <SDL.h>
 #include <SDL_ttf.h>
-#include <iostream>
 
 #include "font.h"
 
@@ -15,6 +16,16 @@ bool Font::init()
     }
 
     Font::consolas = TTF_OpenFont("./fonts/consolas.ttf", 24);
+    if (Font::consolas == nullptr)
+    {
+        std::cout << "Font ttf file not found \"./fonts/consolas.ttf\"\n";
+        return false;
+    }
     
     return true;
+}
+
+void Font::cleanup()
+{
+    TTF_CloseFont(Font::consolas);
 }

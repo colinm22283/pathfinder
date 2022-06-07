@@ -111,6 +111,9 @@ void Render::drawText(int x, int y, TTF_Font* font, std::string str)
     rect.h = h;
 
     SDL_RenderCopy(renderer, tex, NULL, &rect);
+
+    SDL_FreeSurface(textSurface);
+    SDL_DestroyTexture(tex);
 }
 void Render::drawText(int x, int y, TTF_Font* font, std::string str, float scale)
 {
@@ -132,6 +135,7 @@ void Render::drawText(int x, int y, TTF_Font* font, std::string str, float scale
     rect.h = h;
 
     SDL_RenderCopy(renderer, tex, NULL, &rect);
+
     SDL_FreeSurface(textSurface);
     SDL_DestroyTexture(tex);
 }

@@ -7,12 +7,13 @@ extern SDL_Renderer* renderer;
 
 namespace Engine
 {
-    extern bool quit;
+    extern bool running;
     extern long currentTime;
     extern long deltaTime;
 
     bool init(); //                                        Initialize the engine
-    void close(); //                                       Stop the engine
+    void quit(); //                                        Quit the engine
+    void awaitQuit();
 
     void start();
     void update();

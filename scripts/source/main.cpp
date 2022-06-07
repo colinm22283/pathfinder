@@ -15,19 +15,15 @@
 
 void Script::exit()
 {
-    Console::print("Exit");
-
-    Engine::quit = true;
+    Engine::quit();
 }
 
 void Script::start()
 {
-    Global::fpsLimit = 10000000;
+    Global::fpsLimit = 0;
     Global::fpsOutput = true;
 
     gridInit();
-
-    PATHFINDER_INIT();
 }
 
 bool pathfinderUpdate = false;
@@ -50,7 +46,11 @@ void Script::update()
 
 void Script::keyDown(SDL_Keysym keysym)
 {
-    if (keysym.sym == SDLK_SPACE) pathfinderUpdate = true;
+    if (keysym.sym == SDLK_SPACE && !Console::visibible)
+    {
+        PATHFINDER_INIT();
+        pathfinderUpdate = true;
+    }
 }
 
 void Script::mouseDown(int button) { }

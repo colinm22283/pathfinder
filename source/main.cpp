@@ -19,7 +19,7 @@ int main()
 
     Engine::start();
 
-    Engine::close();
+    Engine::awaitQuit();
 
     return 0;
 }

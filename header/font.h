@@ -8,4 +8,5 @@ namespace Font
     extern TTF_Font* consolas;
 
     bool init();
+    void cleanup();
 }

@@ -11,20 +11,33 @@
 #include "console.h"
 #include "render.h"
 
+void engineUpdateStart();
+void quitThreadFunction();
+
+bool awaitingEngineQuit = false;
+
 long prevTime = 0;
 
-SDL_Window* window = NULL;
-SDL_Renderer* renderer = NULL;
+SDL_Window* window = nullptr;
+SDL_Renderer* renderer = nullptr;
 
-bool Engine::quit = false;
+std::thread* updateThread = nullptr;
+std::thread* eventThread = nullptr;
+std::thread* timerThread = nullptr;
+std::thread* quitThread = nullptr;
+
+bool Engine::running = false;
 long Engine::currentTime = 0;
 long Engine::deltaTime = 0;
 
 bool Engine::init()
 {
+    Engine::running = true;
+    awaitingEngineQuit = true;
+
     if (SDL_Init(SDL_INIT_VIDEO) < 0)
     {
-        std::cout << "Could not initialize SDL, Error: " << SDL_GetError();
+        std::cout << "Could not initialize SDL, Error: " << SDL_GetError() << '\n';
         return false;
     }
     else
@@ -33,48 +46,77 @@ bool Engine::init()
             Global::windowWidth, Global::windowHeight, 0,
             &window, &renderer
         );
-        if (window == NULL)
+        if (window == nullptr)
         {
-            std::cout << "Window could not be created, Error: " << SDL_GetError();
+            std::cout << "Window could not be created, Error: " << SDL_GetError() << '\n';
             return false;
         }
         else
-        { }
+        {
+            if (!Font::init())
+            {
+                std::cout << "Failed to initialize fonts\n";
+                return false;
+            }
+        }
     }
     return true;
 }
-void Engine::close()
+void Engine::quit()
 {
+    Engine::running = false;
+
+    quitThread = new std::thread(quitThreadFunction);
+}
+void quitThreadFunction()
+{
+    if (updateThread->joinable()) updateThread->join();
+    if (eventThread->joinable()) eventThread->join();
+    if (timerThread->joinable()) timerThread->join();
+
+    delete updateThread;
+    delete eventThread;
+    delete timerThread;
+
+    Font::cleanup();
+
+    SDL_DestroyRenderer(renderer);
+    renderer = nullptr;
+
     SDL_DestroyWindow(window);
-    window = NULL;
+    window = nullptr;
 
     SDL_Quit();
+
+    awaitingEngineQuit = false;
 }
 void Engine::start()
 {
-    if (!Font::init())
-    {
-        std::cout << "Failed to initialize";
-        return;
-    }
-
     Script::start();
 
-    std::thread eventThread(Event::init);
-    std::thread timerThread(timerUpdate);
+    eventThread = new std::thread(Event::init);
+    timerThread = new std::thread(timerUpdate);
+    updateThread = new std::thread(engineUpdateStart);
+}
 
-    while (!Engine::quit)
+void engineUpdateStart()
+{
+    while (Engine::running)
     {
         if (Global::fpsLimit != 0)
         {
-            while (Engine::currentTime - prevTime <= 1000.0 / Global::fpsLimit);
+            long temp = (long)(1000.0 / Global::fpsLimit) - Engine::currentTime + prevTime;
+            std::this_thread::sleep_for(std::chrono::milliseconds((unsigned int)(
+                temp < 0 ? 0 : temp
+            )));
         }
         Engine::deltaTime = Engine::currentTime - prevTime;
         prevTime = Engine::currentTime;
         Engine::update();
     }
 }
-int fpsTimer = 500;
+
+unsigned int fpsTimer = 500;
 float fpsRead = 0;
 void Engine::update()
 {
@@ -85,7 +127,7 @@ void Engine::update()
     {
         if (fpsTimer > 500)
         {
-            fpsRead = 1000.0 / Engine::deltaTime;
+            fpsRead = 1000.0f / (float)Engine::deltaTime;
             fpsTimer -= 500;
         }
 
@@ -104,9 +146,16 @@ void Engine::update()
 }
 void Engine::timerUpdate()
 {
-    while (true)
+    while (Engine::running)
     {
         currentTime++;
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
+}
+
+void Engine::awaitQuit()
+{
+    while (Engine::running) std::this_thread::sleep_for(std::chrono::seconds(1));
+
+    quitThread->join();
 }
