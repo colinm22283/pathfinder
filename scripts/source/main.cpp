@@ -68,7 +68,7 @@ void Script::update()
         }
     }
 
-    if (pathfinderUpdate) PATHFINDER_UPDATE();
+    if (pathfinderUpdate) if (PATHFINDER_UPDATE()) pathfinderUpdate = false;
 
     if (pathFound)
     {

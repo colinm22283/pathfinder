@@ -7,26 +7,27 @@
 
 struct point { unsigned int x; unsigned int y; point* from; };
 
-std::vector<point> scanned;
+bool** scanned = nullptr;
 std::vector<point*> next;
 
 std::vector<point> path;
 std::vector<point*> all;
 
-bool found = false;
-
 void dijkstraInit()
 {
     next.push_back(new point { startPosX, startPosY, nullptr });
+
+    scanned = new bool*[GRID_WIDTH];
+    for (unsigned int i = 0; i < GRID_WIDTH; i++)
+    {
+        scanned[i] = new bool[GRID_HEIGHT];
+        for (unsigned int j = 0; j < GRID_HEIGHT; j++) scanned[i][j] = false;
+    }
 }
 bool dijkstraUpdate()
 {
-    if (found) return true;
-
     if (next[0]->x == goalPosX && next[0]->y == goalPosY)
     {
-        found = true;
-
         Console::print("Found Path");
 
         point* current = next[0];
@@ -42,24 +43,19 @@ bool dijkstraUpdate()
 
         for (unsigned int i = 0; i < (unsigned int)all.size(); i++) delete all[i];
 
+        for (unsigned int i = 0; i < GRID_WIDTH; i++) delete scanned[i];
+        delete scanned;
+
         pathFound = true;
+
+        return true;
     }
 
     all.push_back(next[0]);
 
-    bool isScanned = false;
-    for (unsigned int i = 0; i < (unsigned int)scanned.size(); i++)
+    if (!scanned[next[0]->x][next[0]->y] && grid[next[0]->x][next[0]->y].type != tileType::WALL)
     {
-        if (next[0]->x == scanned[i].x && next[0]->y == scanned[i].y)
-        {
-            isScanned = true;
-            break;
-        }
-    }
-
-    if (!isScanned && grid[next[0]->x][next[0]->y].type != tileType::WALL)
-    {
-        scanned.push_back({ next[0]->x, next[0]->y });
+        scanned[next[0]->x][next[0]->y] = true;
         grid[next[0]->x][next[0]->y].scanned = true;
 
         next.push_back(new point { next[0]->x - 1, next[0]->y, next[0] });
