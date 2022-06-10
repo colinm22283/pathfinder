@@ -70,10 +70,7 @@ void Script::update()
 
     if (pathfinderUpdate) if (PATHFINDER_UPDATE()) pathfinderUpdate = false;
 
-    if (pathFound)
-    {
-        Render::drawText(650, 80, Font::consolas, "Steps: " + std::to_string(pathLength));
-    }
+    if (pathFound) Render::drawText(650, 80, Font::consolas, "Steps: " + std::to_string(pathLength));
 }
 
 void Script::keyDown(SDL_Keysym keysym)

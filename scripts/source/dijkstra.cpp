@@ -28,8 +28,6 @@ bool dijkstraUpdate()
 {
     if (next[0]->x == goalPosX && next[0]->y == goalPosY)
     {
-        Console::print("Found Path");
-
         point* current = next[0];
         while (true)
         {
