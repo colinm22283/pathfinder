@@ -3,13 +3,13 @@ project(Pathfinder)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_BUILD_TYPE Debug)
-set(CMAKE_MODULE_PATH /usr/share/cmake-3.18/Modules)
+set(CMAKE_MODULE_PATH /usr/share/cmake-3.22/Modules)
 
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 
 find_package(SDL2TTF REQUIRED)
-include_directories(${SDL2TTF_INCLUDE_DIRS})
+include_directories(${SDL2_TTF_INCLUDE_DIRS})
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)

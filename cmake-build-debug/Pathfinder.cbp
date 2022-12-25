@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Pathfinder"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\cmake-3.22\;CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\;CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\Internal\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/colin/projects/Pathfinder/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Pathfinder">
+				<Option output="/home/colin/projects/Pathfinder/cmake-build-debug/Pathfinder" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/colin/projects/Pathfinder/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/home/colin/projects/Pathfinder/header"/>
+					<Add directory="/home/colin/projects/Pathfinder/scripts/header"/>
+					<Add directory="/home/colin/projects/Pathfinder/config"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 Pathfinder"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Pathfinder/fast">
+				<Option output="/home/colin/projects/Pathfinder/cmake-build-debug/Pathfinder" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/colin/projects/Pathfinder/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/home/colin/projects/Pathfinder/header"/>
+					<Add directory="/home/colin/projects/Pathfinder/scripts/header"/>
+					<Add directory="/home/colin/projects/Pathfinder/config"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 Pathfinder/fast"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/colin/projects/Pathfinder/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/colin/projects/Pathfinder/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/colin/projects/Pathfinder/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/colin/projects/Pathfinder/scripts/source/dijkstra.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/scripts/source/grid.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/scripts/source/main.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/console.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/consoleParser.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/engine.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/event.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/font.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/global.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/img/bmp.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/img/img.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/input.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/main.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/misc.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/source/render.cpp">
+			<Option target="Pathfinder"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/FindPackageMessage.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/FindSDL2TTF.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/FindThreads.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\Internal\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
