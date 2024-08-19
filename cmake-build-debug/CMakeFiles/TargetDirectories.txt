@@ -1,3 +1,0 @@
-/home/colin/projects/Pathfinder/cmake-build-debug/CMakeFiles/Pathfinder.dir
-/home/colin/projects/Pathfinder/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/colin/projects/Pathfinder/cmake-build-debug/CMakeFiles/rebuild_cache.dir
