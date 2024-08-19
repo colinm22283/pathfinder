@@ -5,7 +5,7 @@
 		<Option title="Pathfinder"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\cmake-3.22\;CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\;CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\Internal\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\usr\lib64\cmake\SDL2\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\cmake\;CMake Files\..\..\..\..\usr\share\cmake\Modules\;CMake Files\..\..\..\..\usr\share\cmake\Modules\Internal\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/colin/projects/Pathfinder/cmake-build-debug"/>
@@ -24,16 +24,14 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/home/colin/projects/Pathfinder/header"/>
 					<Add directory="/home/colin/projects/Pathfinder/scripts/header"/>
 					<Add directory="/home/colin/projects/Pathfinder/config"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13/include/g++-v13"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13/include/g++-v13/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13/include/g++-v13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13/include"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -50,16 +48,14 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/home/colin/projects/Pathfinder/header"/>
 					<Add directory="/home/colin/projects/Pathfinder/scripts/header"/>
 					<Add directory="/home/colin/projects/Pathfinder/config"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13/include/g++-v13"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13/include/g++-v13/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13/include/g++-v13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13/include"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -138,35 +134,38 @@
 		<Unit filename="/home/colin/projects/Pathfinder/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\"/>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/lib64/cmake/SDL2/sdl2-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SDL2\"/>
 		</Unit>
-		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\"/>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/lib64/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SDL2\"/>
 		</Unit>
-		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake/Modules/CheckCSourceCompiles.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake/Modules/CheckIncludeFile.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake/Modules/CheckLibraryExists.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake/Modules/FeatureSummary.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/FindPackageMessage.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/FindSDL2TTF.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake/Modules/FindPackageMessage.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/FindThreads.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\"/>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake/Modules/FindSDL2_ttf.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake-3.22\Modules\Internal\"/>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake/Modules/FindThreads.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/home/colin/projects/Pathfinder/../../../../usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\cmake\Modules\Internal\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -3,12 +3,12 @@ project(Pathfinder)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_BUILD_TYPE Debug)
-set(CMAKE_MODULE_PATH /usr/share/cmake-3.22/Modules)
+set(CMAKE_MODULE_PATH /usr/share/cmake/Modules)
 
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 
-find_package(SDL2TTF REQUIRED)
+find_package(SDL2_ttf REQUIRED)
 include_directories(${SDL2_TTF_INCLUDE_DIRS})
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
@@ -22,4 +22,4 @@ file(GLOB_RECURSE Pathfinder_SOURCES CONFIGURE_DEPENDS "*.cpp")
 list(FILTER Pathfinder_SOURCES EXCLUDE REGEX ".*cmake-build-debug.*")
 add_executable(Pathfinder ${Pathfinder_SOURCES})
 
-target_link_libraries(Pathfinder ${SDL2_LIBRARIES} ${SDL2TTF_LIBRARY} Threads::Threads)
+target_link_libraries(Pathfinder ${SDL2_LIBRARIES} ${SDL2_TTF_LIBRARIES} Threads::Threads)

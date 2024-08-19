@@ -7,7 +7,7 @@ extern SDL_Renderer* renderer;
 
 namespace Engine
 {
-    extern bool running;
+    extern volatile bool running;
     extern long currentTime;
     extern long deltaTime;
 

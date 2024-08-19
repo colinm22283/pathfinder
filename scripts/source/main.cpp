@@ -24,7 +24,7 @@ void Script::exit()
 
 void Script::start()
 {
-    Global::fpsLimit = 0;
+    Global::fpsLimit = 60;
     Global::fpsOutput = true;
 
     gridInit();

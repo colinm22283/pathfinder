@@ -24,7 +24,7 @@ std::thread* eventThread = nullptr;
 std::thread* timerThread = nullptr;
 std::thread* quitThread = nullptr;
 
-bool Engine::running = false;
+volatile bool Engine::running = false;
 long Engine::currentTime = 0;
 long Engine::deltaTime = 0;
 
@@ -91,7 +91,7 @@ void Engine::start()
 
     eventThread = new std::thread(Event::init);
     timerThread = new std::thread(timerUpdate);
-    updateThread = new std::thread(engineUpdateStart);
+    engineUpdateStart();
 }
 
 void engineUpdateStart()
